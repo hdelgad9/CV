@@ -39,8 +39,8 @@ cv:
           - 'VPLanet Group; Advisor: Rory Barnes'
           - 'Using VPLanet, an open source code written in C, developed simulations of exoplanets
             orbiting M dwarf stars and studied their habitability based on stellar,
-            orbital, rotational and atmospheric parameters.'
-          - 'With python, created simulations of exoplanetary atmospheric spectra and used 
+            orbital, rotational, and atmospheric parameters.'
+          - 'With Python, created simulations of exoplanetary atmospheric spectra and used 
             bayesian approach to simulate JWST observations of such atmosphere to assess habitability.'
       - company: Universidad Nacioinal Autonoma de Mexico 
         position: Research Assistant
@@ -49,7 +49,7 @@ cv:
         end_date: 2024-09
         highlights:
           - 'Instituto de Ciencias Nucleares; Advisor: Antigona Segura'
-          - 'Used python and fortran to understand how energetic particles from
+          - 'Used Python and Fortran to understand how energetic particles from
             solar flares could affect atmospheric nitrogen on exoplanets.'
       - company: Stanford University
         position: Research Assistant
@@ -62,11 +62,11 @@ cv:
             on a magma ocean code.
       - company: University of Washington
         position: Teaching Assistant
-        location: Seattle, WA,USA
+        location: Seattle, WA, USA
         start_date: 2019-09
         end_date: 2021-05
         highlights:
-          - 'Taught the Activty portion of Introduction to Astronomy for undergraduate 
+          - 'Taught the Activity portion of Introduction to Astronomy for undergraduate 
             students in-person and online.'
           - Moderated discussions for 30+ students in the online course.
           - 'Migrated Introduction to Astrobiology course from in-person to online Canvas platform
@@ -112,7 +112,7 @@ cv:
         end_date: 2016-08
         highlights:
           - 'Planetary Systems Laboratory; Advisor: Paul Romani'
-          - 'Used data from Cassini-Huygens mission to constrain the source of stratospheric
+          - 'Used data from the Cassini-Huygens mission to constrain the source of stratospheric
             water of Saturn'
       - company: The Washington Center
         position: International Relation Interns
@@ -123,7 +123,7 @@ cv:
           - 'Social Inclusion Division at Organization of American States; Advisor: Alexandra Barrantes'
           - Assisted in communications between the Division of Social Inclusion and Diplomats of the American
             States for diplomatic meetings.
-          - 'Assisted in Translating, proofreading and formatting the book "Protocolo San Salvador"'
+          - 'Assisted in Translating, proofreading, and formatting the book "Protocolo San Salvador"'
           - Live English scribe for the Secretary of Social Inclusion Meetings for the American States.
       - company: San Jose State University
         position: Summer Research Intern
@@ -133,7 +133,7 @@ cv:
         highlights:
           - 'Laboratory of Neuroscience; Advisor: Katherine Wilkinson'
           - 'Used mice leg muscles to study the effects of lactic acid on nociceptors III and IV neurons
-            and how obseity could be related to associated muscular and joint pain.'
+            and how obesity could be related to associated muscular and joint pain.'
     Publications:
       - title: 'Climates of Gl 514 b (in-prep)'
         authors:
@@ -158,7 +158,7 @@ cv:
           - Selected out of 200 applicants to travel the world for 8 months as part of a cultural experience.
           - 'Dates traveled: September 2023 - May 2024.'
       - name: Department of Astronomy Teacher of the Year Award
-        location: Seattle, WA,USA
+        location: Seattle, WA, USA
         date: 2020-09
       - name: ARCS Foundation Fellowship
         location: Seattle, WA, USA
@@ -222,7 +222,7 @@ cv:
       - name: "Effect of Obesity and Lactic Acid on Muscle's Nociceptors III and IV neurons"
         date: 2015-11
         highlights:
-          - Annual Biomedical Research Conference for Minority Students, San Antonio, TX,USA
+          - Annual Biomedical Research Conference for Minority Students, San Antonio, TX, USA
       - name: "Effect of Obesity and Lactic Acid on Muscle's Nociceptors III and IV"
         date: 2015-10
         highlights:
@@ -261,14 +261,14 @@ cv:
         highlights:
           - 'Taught high school students Science courses: Astronomy, Chemistry, Physics,
             Biology, Math (Algebra-Calculus), and Earth and Space Science.'
-          - 'Served as substitute teacher for Spanish and Economy.'
+          - 'Served as a substitute teacher for Spanish and Economy.'
       - company: Griffith Observatory
         position: Museum Guide and Online Support
         location: Los Angeles, CA, USA
         start_date: 2021-06
         end_date: 2023-09
         highlights:
-          - Worked explaining astronomy history, instruments and science for the general public
+          - Worked explaining astronomy history, instruments, and science to the general public
             in English and Spanish.
           - Worked as online support for the Griffith Museum Online School Program.
     References:
