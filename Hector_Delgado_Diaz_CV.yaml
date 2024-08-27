@@ -1,0 +1,325 @@
+cv:
+  name: Hector E. Delgado Diaz
+  location: Seattle, WA
+  email: hdelgad9@uw.edu
+  social_networks:
+    - network: GitHub
+      username: hdelgad9
+  sections:
+    education:
+      - institution: University of Washington
+        area: Astronomy and Astrobiology
+        degree: 'Ph.D.'
+        start_date: 2019-09
+        end_date: present
+        highlights:
+          - 'Master of Science in Astronomy degree conferred 2021-03'
+          - 'GPA: 3.71/4.00'
+          - '**Coursework:** Cosmology/Particle Astrophysics, Radiative Processes, 
+            Galactic Structure, Science Communication'
+      - institution: California State University Los Angeles
+        area: Physics
+        degree: 'M.S.'
+        start_date: 2017-08
+        end_date: 2019-05
+        highlights:
+          - 'Dissertation Title: Stability of Nitrogen in Planetary Atmospheres in Contact with Liquid Water'
+      - institution: Universidad de Puerto Rico en Cayey
+        area: General Sciences
+        degree: 'B.Sc.'
+        start_date: 2012-08
+        end_date: 2017-05
+    Academic Experience:
+      - company: University of Washington
+        position: Research Assistant
+        location: Seattle, WA, USA
+        start_date: 2019-09
+        end_date: present
+        highlights:
+          - 'VPLanet Group; Advisor: Rory Barnes'
+          - 'Using VPLanet, an open source code written in C, developed simulations of exoplanets
+            orbiting M dwarf stars and studied their habitability based on stellar,
+            orbital, rotational, and atmospheric parameters.'
+          - 'With Python, created simulations of exoplanetary atmospheric spectra and used 
+            bayesian approach to simulate JWST observations of such atmosphere to assess habitability.'
+      - company: Universidad Nacioinal Autonoma de Mexico 
+        position: Research Assistant
+        location: Ciudad de Mexico, Mexico
+        start_date: 2024-06
+        end_date: 2024-09
+        highlights:
+          - 'Instituto de Ciencias Nucleares; Advisor: Antigona Segura'
+          - 'Used Python and Fortran to understand how energetic particles from
+            solar flares could affect atmospheric nitrogen on exoplanets.'
+      - company: Stanford University
+        position: Research Assistant
+        location: Palo Alto, CA, USA
+        start_date: 2023-06
+        end_date: 2023-09
+        highlights:
+          - 'Earth and Planetary Sciences; Advisor: Laura Schaefer'
+          - Used MATLAB to add the physics of CO2 outgassing from planetary interior
+            on a magma ocean code.
+      - company: University of Washington
+        position: Teaching Assistant
+        location: Seattle, WA, USA
+        start_date: 2019-09
+        end_date: 2021-05
+        highlights:
+          - 'Taught the Activity portion of Introduction to Astronomy for undergraduate 
+            students in-person and online.'
+          - Moderated discussions for 30+ students in the online course.
+          - 'Migrated Introduction to Astrobiology course from in-person to online Canvas platform
+            during the COVID pandemic and the course is still available online.'
+      - company: CERN
+        position: Research Intern
+        location: Geneva, Switzerland
+        start_date: 2019-06
+        end_date: 2019-09
+        highlights:
+          - 'ATLAS group; Advisor: Matt LeBlanc'
+          - 'Used C++ to process and clean data from particle collisions gathered by 
+            the ATLAS detector.'
+      - company: NASA Jet Propulsion Laboratory
+        position: Visiting Research Student
+        location: La Canada, CA, USA
+        start_date: 2018-08
+        end_date: 2019-05
+        highlights:
+          - 'Astrobiology Division; Advisor: Renyu Hu'
+          - Used MATLAB to calculate the effect of lightning on atmospheric nitrogen when bodies
+            of water are present on the exoplanet around Gj 876.
+      - company: California State University Los Angeles
+        position: Research Assistant
+        location: Los Angeles, CA
+        start_date: 2018-01
+        end_date: 2018-06
+        highlights:
+          - 'Physics Department; Advisor: Luca Ricci'
+          - Used ALMA radio telescope data to study the chemical components of protoplanetary disks.
+      - company: Universidad de Puerto Rico en Cayey
+        position: Student Researcher
+        location: Cayey, PR, USA
+        start_date: 2015-08
+        end_date: 2017-05
+        highlights:
+          - 'Laboratorio de Modelaje y Simulaciones Teoricas'
+          - 'Modeled rate of reaction for different configurations of atmospheric CO2 and H2O.'
+      - company: NASA Goddard Space Flight Center
+        position: Summer Research Intern
+        location: Greenbelt, MD, USA
+        start_date: 2016-06
+        end_date: 2016-08
+        highlights:
+          - 'Planetary Systems Laboratory; Advisor: Paul Romani'
+          - 'Used data from the Cassini-Huygens mission to constrain the source of stratospheric
+            water of Saturn'
+      - company: The Washington Center
+        position: International Relation Interns
+        location: Washington, DC, USA
+        start_date: 2015-01
+        end_date: 2015-06
+        highlights:
+          - 'Social Inclusion Division at Organization of American States; Advisor: Alexandra Barrantes'
+          - Assisted in communications between the Division of Social Inclusion and Diplomats of the American
+            States for diplomatic meetings.
+          - 'Assisted in Translating, proofreading, and formatting the book "Protocolo San Salvador"'
+          - Live English scribe for the Secretary of Social Inclusion Meetings for the American States.
+      - company: San Jose State University
+        position: Summer Research Intern
+        location: San Jose, CA, USA
+        start_date: 2014-06
+        end_date: 2014-08
+        highlights:
+          - 'Laboratory of Neuroscience; Advisor: Katherine Wilkinson'
+          - 'Used mice leg muscles to study the effects of lactic acid on nociceptors III and IV neurons
+            and how obesity could be related to associated muscular and joint pain.'
+    Publications:
+      - title: 'Climates of Gl 514 b (in-prep)'
+        authors:
+          - '***Hector Delgado Diaz***'
+          - Rory Barnes
+          - Russell Deitrick
+          - Mario Damasso
+      - title: Stability of Nitrogen in Planetary Atmospheres in Contact with Liquid Water
+        authors:
+          - Renyu Hu
+          - '***Hector Delgado Diaz***'
+        doi: 10.3847/1538-4357/ab4cea
+        journal: The Astrophysical Journal
+        date: 2019-11
+    Awards and Fellowships:
+      - name: Beca Josep Comas i Sola Escuela de Astrobiologia
+        location: Santander, Spain
+        date: 2023-07
+      - name: Bonderman Fellowship Award
+        date: 2021-04
+        highlights:
+          - Selected out of 200 applicants to travel the world for 8 months as part of a cultural experience.
+          - 'Dates traveled: September 2023 - May 2024.'
+      - name: Department of Astronomy Teacher of the Year Award
+        location: Seattle, WA, USA
+        date: 2020-09
+      - name: ARCS Foundation Fellowship
+        location: Seattle, WA, USA
+        date: 2019-08
+        highlights:
+          - 'Selected for a 3-year fellowship totaling \$17,500.'
+      - name: GEM Fellow
+        location: Seattle, WA, USA
+        date: 2019-08
+      - name: Exo-Atmoshperes Summer School Scholarship
+        location: Chur, Switzerland
+        date: 2019-06
+      - name: Hispanic Scholarship Fund Award
+        location: Los Angeles, CA, USA
+        date: 2018-08
+    Talks and Posters:
+      - name: Climates of Gl 514 b
+        date: 2024-08
+        highlights:
+          - 'NASA Goddard: ROCKE-3D Journal Club'
+      - name: Climates of Gl 514 b
+        date: 2024-08
+        highlights:
+          - Simposio en Materiales y Fisicoquimica - Sociedad Dominicana de Fisica 
+      - name: 'FLUXS - Gas Fluxes for Understanding and Experimenting the Subsurface'
+        date: 2023-07
+        highlights:
+          - Mars Ideation Factory, NASA Goddard
+      - name: Climates of Gl 514 b
+        date: 2023-06
+        highlights:
+          - Qualifying Exam, University of Washington
+      - name: Climates of Gl 514 b
+        date: 2023-05
+        highlights:
+          - AbGradCon, San Diego, CA, USA
+      - name: Climates og Gl 514 b (poster)
+        date: 2023-01
+        highlights:
+          - American Astronomical Society, Seattle, WA, USA
+      - name: Procurando Exoplanetas Habitables con el Telescopio JWST
+        date: 2021-12
+        highlights:
+          - Spanish talk for the Museum of Flight, Seattle, WA, USA
+      - name: Searching for Habitable Exoplanets Using the Telescope JWST
+        date: 2021-10
+        highlights:
+          - Museum of Flight, Seattle, WA, USA
+      - name: Characterizing Exoplanetary Atmospheres with JWST
+        date: 2021-05
+        highlights:
+          - Town Hall Seattle, WA, USA
+      - name: Caracterizando Atmosferas de Exoplanetas con JWST
+        date: 2021-01
+        highlights:
+          - Sociedad Dominicana de Fisica, presentacion en linea
+      - name: Stability of Nitrogen in Planetary Atmospheres in Contact with Liquid Water 
+        date: 2019-01
+        highlights:
+          - American Astronomical Society, Seattle, WA, USA
+      - name: Stability of Nitrogen in Planetary Atmospheres in Contact with Liquid Water 
+        date: 2018-11
+        highlights:
+          - American Physical Society Bridge Program Conference, Mountain View, CA, USA
+      - name: "Saturn's Stratospheric Oxygen Compounds"
+        date: 2016-10
+        highlights:
+          - Division of Planetary Science, Pasadena, CA, USA
+      - name: "Effect of Obesity and Lactic Acid on Muscle's Nociceptors III and IV neurons"
+        date: 2015-11
+        highlights:
+          - Annual Biomedical Research Conference for Minority Students, San Antonio, TX, USA
+      - name: "Effect of Obesity and Lactic Acid on Muscle's Nociceptors III and IV"
+        date: 2015-10
+        highlights:
+          - Society for the Advancement of Chicanos and Native Americans in Science, Los Angeles, CA, USA
+    Outreach and Volunteering Experience:
+      - name: NASA Subject Matter Expert Volunteering
+        start_date: 2021-10
+        end_date: present
+      - name: 'VPLanet Workshop - Tech Support'
+        date: 2023-08
+      - name: UW Astronomy Graduate Senator
+        start_date: 2020-09
+        end_date: 2021-05
+    Professional Development:
+      - name: Mars Ideation Factory
+        date: 2023-08
+        location: Greenbelt, MD, USA
+      - name: Astrobiology Summer School
+        date: 2023-07
+        location: Santander, Spain
+      - name: Carl Sagan Summer Workshop
+        date: 2023-07
+        location: Pasadena, CA, USA
+      - name: Exo-Atmoshperes Summer School
+        date: 2019-06
+        location: Chur, Switzerland
+    Research Mentorship:
+      - name: Kyler Reynolds (Everett College)
+        date: 2024
+    Work Experience:
+      - company: Fusion Academy
+        position: High School Science Teacher
+        location: Pasadena, CA, USA
+        start_date: 2022-06
+        end_date: 2023-09
+        highlights:
+          - 'Taught high school students Science courses: Astronomy, Chemistry, Physics,
+            Biology, Math (Algebra-Calculus), and Earth and Space Science.'
+          - 'Served as a substitute teacher for Spanish and Economy.'
+      - company: Griffith Observatory
+        position: Museum Guide and Online Support
+        location: Los Angeles, CA, USA
+        start_date: 2021-06
+        end_date: 2023-09
+        highlights:
+          - Worked explaining astronomy history, instruments, and science to the general public
+            in English and Spanish.
+          - Worked as online support for the Griffith Museum Online School Program.
+    References:
+      - bullet: '***Dr. Rory Barnes*** (UW) - Ph.D. Advisor: [rkb9@uw.edu](mailto:rkb9@uw.edu)'
+      - bullet: '***Dr. Jessica Werk*** (UW) - Astronomy Chair: [jwerk@uw.edu](mailto:jwerk@uw.edu)'
+      - bullet: '***Dr. Eric Agol*** (UW) - Graduate Advisor: [agol@uw.edu](mailto:agol@uw.edu)'
+
+design:
+  theme: classic
+  font: Source Sans 3
+  font_size: 10pt
+  page_size: letterpaper
+  color: '#004f90'
+  disable_external_link_icons: false
+  disable_page_numbering: false
+  page_numbering_style: NAME - Page PAGE_NUMBER of TOTAL_PAGES
+  disable_last_updated_date: false
+  last_updated_date_style: Last updated in TODAY
+  header_font_size: 30 pt
+  text_alignment: justified
+  seperator_between_connections: ''
+  use_icons_for_connections: true
+  margins:
+    page:
+      top: 2 cm
+      bottom: 2 cm
+      left: 2 cm
+      right: 2 cm
+    section_title:
+      top: 0.3 cm
+      bottom: 0.2 cm
+    entry_area:
+      left_and_right: 0.2 cm
+      vertical_between: 0.2 cm
+      date_and_location_width: 4.5 cm
+      education_degree_width: 1 cm
+    highlights_area:
+      top: 0.10 cm
+      left: 0.4 cm
+      vertical_between_bullet_points: 0.10 cm
+    header:
+      vertical_between_name_and_connections: 0.3 cm
+      bottom: 0.3 cm
+      horizontal_between_connections: 0.5 cm
+  #show_timespan_in:
+  #  - Experience

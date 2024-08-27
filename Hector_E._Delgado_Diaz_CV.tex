@@ -1,0 +1,853 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot, % set margins without considering header and footer
+    top=2 cm, % seperation between body and page edge from the top
+    bottom=2 cm, % seperation between body and page edge from the bottom
+    left=2 cm, % seperation between body and page edge from the left
+    right=2 cm, % seperation between body and page edge from the right
+    footskip=1.0 cm, % seperation between body and footer
+    % showframe % for debugging 
+]{geometry} % for adjusting page geometry
+\usepackage[explicit]{titlesec} % for customizing section titles
+\usepackage{tabularx} % for making tables with fixed width columns
+\usepackage{array} % tabularx requires this
+\usepackage[dvipsnames]{xcolor} % for coloring text
+\definecolor{primaryColor}{RGB}{0, 79, 144} % define primary color
+\usepackage{enumitem} % for customizing lists
+\usepackage{fontawesome5} % for using icons
+\usepackage{amsmath} % for math
+\usepackage[
+    pdftitle={Hector E. Delgado Diaz's CV},
+    pdfauthor={Hector E. Delgado Diaz},
+    pdfcreator={LaTeX with RenderCV},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref} % for links, metadata and bookmarks
+\usepackage[pscoord]{eso-pic} % for floating text on the page
+\usepackage{calc} % for calculating lengths
+\usepackage{bookmark} % for bookmarks
+\usepackage{lastpage} % for getting the total number of pages
+\usepackage{changepage} % for one column entries (adjustwidth environment)
+\usepackage{paracol} % for two and three column entries
+\usepackage{ifthen} % for conditional statements
+\usepackage{needspace} % for avoiding page brake right after the section title
+\usepackage{iftex} % check if engine is pdflatex, xetex or luatex
+
+% Ensure that generate pdf is machine readable/ATS parsable:
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage[default, type1]{sourcesanspro} 
+
+% Some settings:
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt} % remove space before adjustwidth environment
+\pagestyle{empty} % no header or footer
+\setcounter{secnumdepth}{0} % no section numbering
+\setlength{\parindent}{0pt} % no indentation
+\setlength{\topskip}{0pt} % no top skip
+\setlength{\columnsep}{0.15cm} % set column seperation
+\makeatletter
+\let\ps@customFooterStyle\ps@plain % Copy the plain style to customFooterStyle
+\patchcmd{\ps@customFooterStyle}{\thepage}{
+    \color{gray}\textit{\small Hector E. Delgado Diaz - Page \thepage{} of \pageref*{LastPage}}
+}{}{} % replace number by desired string
+\makeatother
+\pagestyle{customFooterStyle}
+
+\titleformat{\section}{
+    % avoid page braking right after the section title
+    \needspace{4\baselineskip}
+    % make the font size of the section title large and color it with the primary color
+    \Large\color{primaryColor}
+}{
+}{
+}{
+    % print bold title, give 0.15 cm space and draw a line of 0.8 pt thickness
+    % from the end of the title to the end of the body
+    \textbf{#1}\hspace{0.15cm}\titlerule[0.8pt]\hspace{-0.1cm}
+}[] % section title formatting
+
+\titlespacing{\section}{
+    % left space:
+    -1pt
+}{
+    % top space:
+    0.3 cm
+}{
+    % bottom space:
+    0.2 cm
+} % section title spacing
+
+% \renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$} % custom bullet points
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0.4 cm + 10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights
+
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights for bullet entries
+
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{
+        0.2 cm + 0.00001 cm
+    }{
+        0.2 cm + 0.00001 cm
+    }
+}{
+    \end{adjustwidth}
+} % new environment for one column entries
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for two column entries
+
+\newenvironment{threecolentry}[3][]{
+    \onecolentry
+    \def\thirdColumn{#3}
+    \setcolumnwidth{1 cm, \fill, 4.5 cm}
+    \begin{paracol}{3}
+    {\raggedright #2} \switchcolumn
+}{
+    \switchcolumn \raggedleft \thirdColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for three column entries
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\color{primaryColor}\linespread{1.5}
+}{
+    \par\kern\topsep
+} % new environment for the header
+
+\newcommand{\placelastupdatedtext}{% \placetextbox{<horizontal pos>}{<vertical pos>}{<stuff>}
+  \AddToShipoutPictureFG*{% Add <stuff> to current page foreground
+    \put(
+        \LenToUnit{\paperwidth-2 cm-0.2 cm+0.05cm},
+        \LenToUnit{\paperheight-1.0 cm}
+    ){\vtop{{\null}\makebox[0pt][c]{
+        \small\color{gray}\textit{Last updated in August 2024}\hspace{\widthof{Last updated in August 2024}}
+    }}}%
+  }%
+}%
+
+% save the original href command in a new command:
+\let\hrefWithoutArrow\href
+
+% new command for external links:
+\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\ifthenelse{\equal{#2}{}}{ }{#2 }\raisebox{.15ex}{\footnotesize \faExternalLink*}}}
+
+
+\begin{document}
+    \newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{}
+
+    \placelastupdatedtext
+    \begin{header}
+        \fontsize{30 pt}{30 pt}
+        \textbf{Hector E. Delgado Diaz}
+
+        \vspace{0.3 cm}
+
+        \normalsize
+        \mbox{{\footnotesize\faMapMarker*}\hspace*{0.13cm}Seattle, WA}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{mailto:hdelgad9@uw.edu}{{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}hdelgad9@uw.edu}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{https://github.com/hdelgad9}{{\footnotesize\faGithub}\hspace*{0.13cm}hdelgad9}}%
+    \end{header}
+
+    \vspace{0.3 cm - 0.3 cm}
+
+
+    \section{Education}
+
+
+
+        
+        \begin{threecolentry}{\textbf{Ph.D.}}{
+            Sept 2019 – present
+        }
+            \textbf{University of Washington}, Astronomy and Astrobiology
+            \begin{highlights}
+                \item Master of Science in Astronomy degree conferred 2021-03
+                \item GPA: 3.71/4.00
+                \item \textbf{Coursework:} Cosmology/Particle Astrophysics, Radiative Processes, Galactic Structure, Science Communication
+            \end{highlights}
+        \end{threecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{threecolentry}{\textbf{M.S.}}{
+            Aug 2017 – May 2019
+        }
+            \textbf{California State University Los Angeles}, Physics
+            \begin{highlights}
+                \item Dissertation Title: Stability of Nitrogen in Planetary Atmospheres in Contact with Liquid Water
+            \end{highlights}
+        \end{threecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{threecolentry}{\textbf{B.Sc.}}{
+            Aug 2012 – May 2017
+        }
+            \textbf{Universidad de Puerto Rico en Cayey}, General Sciences
+        \end{threecolentry}
+
+
+    
+    \section{Academic Experience}
+
+
+
+        
+        \begin{twocolentry}{
+            Seattle, WA, USA
+
+        Sept 2019 – present
+        }
+            \textbf{University of Washington}, Research Assistant
+            \begin{highlights}
+                \item VPLanet Group; Advisor: Rory Barnes
+                \item Using VPLanet, an open source code written in C, developed simulations of exoplanets orbiting M dwarf stars and studied their habitability based on stellar, orbital, rotational, and atmospheric parameters.
+                \item With Python, created simulations of exoplanetary atmospheric spectra and used bayesian approach to simulate JWST observations of such atmosphere to assess habitability.
+            \end{highlights}
+        \end{twocolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            Ciudad de Mexico, Mexico
+
+        June 2024 – Sept 2024
+        }
+            \textbf{Universidad Nacioinal Autonoma de Mexico}, Research Assistant
+            \begin{highlights}
+                \item Instituto de Ciencias Nucleares; Advisor: Antigona Segura
+                \item Used Python and Fortran to understand how energetic particles from solar flares could affect atmospheric nitrogen on exoplanets.
+            \end{highlights}
+        \end{twocolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            Palo Alto, CA, USA
+
+        June 2023 – Sept 2023
+        }
+            \textbf{Stanford University}, Research Assistant
+            \begin{highlights}
+                \item Earth and Planetary Sciences; Advisor: Laura Schaefer
+                \item Used MATLAB to add the physics of CO2 outgassing from planetary interior on a magma ocean code.
+            \end{highlights}
+        \end{twocolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            Seattle, WA, USA
+
+        Sept 2019 – May 2021
+        }
+            \textbf{University of Washington}, Teaching Assistant
+            \begin{highlights}
+                \item Taught the Activity portion of Introduction to Astronomy for undergraduate students in-person and online.
+                \item Moderated discussions for 30+ students in the online course.
+                \item Migrated Introduction to Astrobiology course from in-person to online Canvas platform during the COVID pandemic and the course is still available online.
+            \end{highlights}
+        \end{twocolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            Geneva, Switzerland
+
+        June 2019 – Sept 2019
+        }
+            \textbf{CERN}, Research Intern
+            \begin{highlights}
+                \item ATLAS group; Advisor: Matt LeBlanc
+                \item Used C++ to process and clean data from particle collisions gathered by the ATLAS detector.
+            \end{highlights}
+        \end{twocolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            La Canada, CA, USA
+
+        Aug 2018 – May 2019
+        }
+            \textbf{NASA Jet Propulsion Laboratory}, Visiting Research Student
+            \begin{highlights}
+                \item Astrobiology Division; Advisor: Renyu Hu
+                \item Used MATLAB to calculate the effect of lightning on atmospheric nitrogen when bodies of water are present on the exoplanet around Gj 876.
+            \end{highlights}
+        \end{twocolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            Los Angeles, CA
+
+        Jan 2018 – June 2018
+        }
+            \textbf{California State University Los Angeles}, Research Assistant
+            \begin{highlights}
+                \item Physics Department; Advisor: Luca Ricci
+                \item Used ALMA radio telescope data to study the chemical components of protoplanetary disks.
+            \end{highlights}
+        \end{twocolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            Cayey, PR, USA
+
+        Aug 2015 – May 2017
+        }
+            \textbf{Universidad de Puerto Rico en Cayey}, Student Researcher
+            \begin{highlights}
+                \item Laboratorio de Modelaje y Simulaciones Teoricas
+                \item Modeled rate of reaction for different configurations of atmospheric CO2 and H2O.
+            \end{highlights}
+        \end{twocolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            Greenbelt, MD, USA
+
+        June 2016 – Aug 2016
+        }
+            \textbf{NASA Goddard Space Flight Center}, Summer Research Intern
+            \begin{highlights}
+                \item Planetary Systems Laboratory; Advisor: Paul Romani
+                \item Used data from the Cassini-Huygens mission to constrain the source of stratospheric water of Saturn
+            \end{highlights}
+        \end{twocolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            Washington, DC, USA
+
+        Jan 2015 – June 2015
+        }
+            \textbf{The Washington Center}, International Relation Interns
+            \begin{highlights}
+                \item Social Inclusion Division at Organization of American States; Advisor: Alexandra Barrantes
+                \item Assisted in communications between the Division of Social Inclusion and Diplomats of the American States for diplomatic meetings.
+                \item Assisted in Translating, proofreading, and formatting the book "Protocolo San Salvador"
+                \item Live English scribe for the Secretary of Social Inclusion Meetings for the American States.
+            \end{highlights}
+        \end{twocolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            San Jose, CA, USA
+
+        June 2014 – Aug 2014
+        }
+            \textbf{San Jose State University}, Summer Research Intern
+            \begin{highlights}
+                \item Laboratory of Neuroscience; Advisor: Katherine Wilkinson
+                \item Used mice leg muscles to study the effects of lactic acid on nociceptors III and IV neurons and how obesity could be related to associated muscular and joint pain.
+            \end{highlights}
+        \end{twocolentry}
+
+
+
+    
+    \section{Publications}
+
+
+
+        
+        \begin{samepage}
+            \begin{onecolentry}
+                \textbf{Climates of Gl 514 b (in-prep)}
+
+                \vspace{0.10 cm}
+
+                \mbox{\textbf{\textit{Hector Delgado Diaz}}}, \mbox{Rory Barnes}, \mbox{Russell Deitrick}, \mbox{Mario Damasso}
+            \end{onecolentry}
+        \end{samepage}
+
+        \vspace{0.2 cm}
+
+        \begin{samepage}
+            \begin{twocolentry}{
+                Nov 2019
+            }
+                \textbf{Stability of Nitrogen in Planetary Atmospheres in Contact with Liquid Water}
+
+                \vspace{0.10 cm}
+
+                \mbox{Renyu Hu}, \mbox{\textbf{\textit{Hector Delgado Diaz}}}
+                \vspace{0.10 cm}
+
+        \href{https://doi.org/10.3847/1538-4357/ab4cea}{10.3847/1538-4357/ab4cea}
+         (The Astrophysical Journal)    \end{twocolentry}
+        \end{samepage}
+
+
+    
+    \section{Awards And Fellowships}
+
+
+
+        
+        \begin{twocolentry}{
+            Santander, Spain
+
+        July 2023
+        }
+            \textbf{Beca Josep Comas i Sola Escuela de Astrobiologia}
+        \end{twocolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            Apr 2021
+        }
+            \textbf{Bonderman Fellowship Award}
+            \begin{highlights}
+                \item Selected out of 200 applicants to travel the world for 8 months as part of a cultural experience.
+                \item Dates traveled: September 2023 - May 2024.
+            \end{highlights}
+        \end{twocolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            Seattle, WA, USA
+
+        Sept 2020
+        }
+            \textbf{Department of Astronomy Teacher of the Year Award}
+        \end{twocolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            Seattle, WA, USA
+
+        Aug 2019
+        }
+            \textbf{ARCS Foundation Fellowship}
+            \begin{highlights}
+                \item Selected for a 3-year fellowship totaling \$17,500.
+            \end{highlights}
+        \end{twocolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            Seattle, WA, USA
+
+        Aug 2019
+        }
+            \textbf{GEM Fellow}
+        \end{twocolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            Chur, Switzerland
+
+        June 2019
+        }
+            \textbf{Exo-Atmoshperes Summer School Scholarship}
+        \end{twocolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            Los Angeles, CA, USA
+
+        Aug 2018
+        }
+            \textbf{Hispanic Scholarship Fund Award}
+        \end{twocolentry}
+
+
+
+    
+    \section{Talks And Posters}
+
+
+
+        
+        \begin{twocolentry}{
+            Aug 2024
+        }
+            \textbf{Climates of Gl 514 b}
+            \begin{highlights}
+                \item Simposio en Materiales y Fisicoquimica - Sociedad Dominicana de Fisica
+            \end{highlights}
+        \end{twocolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            July 2023
+        }
+            \textbf{FLUXS - Gas Fluxes for Understanding and Experimenting the Subsurface}
+            \begin{highlights}
+                \item Mars Ideation Factory, NASA Goddard
+            \end{highlights}
+        \end{twocolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            June 2023
+        }
+            \textbf{Climates of Gl 514 b}
+            \begin{highlights}
+                \item Qualifying Exam, University of Washington
+            \end{highlights}
+        \end{twocolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            May 2023
+        }
+            \textbf{Climates of Gl 514 b}
+            \begin{highlights}
+                \item AbGradCon, San Diego, CA, USA
+            \end{highlights}
+        \end{twocolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            Jan 2023
+        }
+            \textbf{Climates og Gl 514 b (poster)}
+            \begin{highlights}
+                \item American Astronomical Society, Seattle, WA, USA
+            \end{highlights}
+        \end{twocolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            Dec 2021
+        }
+            \textbf{Procurando Exoplanetas Habitables con el Telescopio JWST}
+            \begin{highlights}
+                \item Spanish talk for the Museum of Flight, Seattle, WA, USA
+            \end{highlights}
+        \end{twocolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            Oct 2021
+        }
+            \textbf{Searching for Habitable Exoplanets Using the Telescope JWST}
+            \begin{highlights}
+                \item Museum of Flight, Seattle, WA, USA
+            \end{highlights}
+        \end{twocolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            May 2021
+        }
+            \textbf{Characterizing Exoplanetary Atmospheres with JWST}
+            \begin{highlights}
+                \item Town Hall Seattle, WA, USA
+            \end{highlights}
+        \end{twocolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            Jan 2021
+        }
+            \textbf{Caracterizando Atmosferas de Exoplanetas con JWST}
+            \begin{highlights}
+                \item Sociedad Dominicana de Fisica, presentacion en linea
+            \end{highlights}
+        \end{twocolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            Jan 2019
+        }
+            \textbf{Stability of Nitrogen in Planetary Atmospheres in Contact with Liquid Water}
+            \begin{highlights}
+                \item American Astronomical Society, Seattle, WA, USA
+            \end{highlights}
+        \end{twocolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            Nov 2018
+        }
+            \textbf{Stability of Nitrogen in Planetary Atmospheres in Contact with Liquid Water}
+            \begin{highlights}
+                \item American Physical Society Bridge Program Conference, Mountain View, CA, USA
+            \end{highlights}
+        \end{twocolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            Oct 2016
+        }
+            \textbf{Saturn's Stratospheric Oxygen Compounds}
+            \begin{highlights}
+                \item Division of Planetary Science, Pasadena, CA, USA
+            \end{highlights}
+        \end{twocolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            Nov 2015
+        }
+            \textbf{Effect of Obesity and Lactic Acid on Muscle's Nociceptors III and IV neurons}
+            \begin{highlights}
+                \item Annual Biomedical Research Conference for Minority Students, San Antonio, TX, USA
+            \end{highlights}
+        \end{twocolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            Oct 2015
+        }
+            \textbf{Effect of Obesity and Lactic Acid on Muscle's Nociceptors III and IV}
+            \begin{highlights}
+                \item Society for the Advancement of Chicanos and Native Americans in Science, Los Angeles, CA, USA
+            \end{highlights}
+        \end{twocolentry}
+
+
+
+    
+    \section{Outreach And Volunteering Experience}
+
+
+
+        
+        \begin{twocolentry}{
+            Oct 2021 – present
+        }
+            \textbf{NASA Subject Matter Expert Volunteering}
+        \end{twocolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            Aug 2023
+        }
+            \textbf{VPLanet Workshop - Tech Support}
+        \end{twocolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            Sept 2020 – May 2021
+        }
+            \textbf{UW Astronomy Graduate Senator}
+        \end{twocolentry}
+
+
+
+    
+    \section{Professional Development}
+
+
+
+        
+        \begin{twocolentry}{
+            Greenbelt, MD, USA
+
+        Aug 2023
+        }
+            \textbf{Mars Ideation Factory}
+        \end{twocolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            Santander, Spain
+
+        July 2023
+        }
+            \textbf{Astrobiology Summer School}
+        \end{twocolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            Pasadena, CA, USA
+
+        July 2023
+        }
+            \textbf{Carl Sagan Summer Workshop}
+        \end{twocolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            Chur, Switzerland
+
+        June 2019
+        }
+            \textbf{Exo-Atmoshperes Summer School}
+        \end{twocolentry}
+
+
+
+    
+    \section{Research Mentorship}
+
+
+
+        
+        \begin{twocolentry}{
+            2024
+        }
+            \textbf{Kyler Reynolds (Everett College)}
+        \end{twocolentry}
+
+
+
+    
+    \section{Work Experience}
+
+
+
+        
+        \begin{twocolentry}{
+            Pasadena, CA, USA
+
+        June 2022 – Sept 2023
+        }
+            \textbf{Fusion Academy}, High School Science Teacher
+            \begin{highlights}
+                \item Taught high school students Science courses: Astronomy, Chemistry, Physics, Biology, Math (Algebra-Calculus), and Earth and Space Science.
+                \item Served as a substitute teacher for Spanish and Economy.
+            \end{highlights}
+        \end{twocolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            Los Angeles, CA, USA
+
+        June 2021 – Sept 2023
+        }
+            \textbf{Griffith Observatory}, Museum Guide and Online Support
+            \begin{highlights}
+                \item Worked explaining astronomy history, instruments, and science to the general public in English and Spanish.
+                \item Worked as online support for the Griffith Museum Online School Program.
+            \end{highlights}
+        \end{twocolentry}
+
+
+
+    
+    \section{References}
+
+    \begin{onecolentry}
+        \begin{highlightsforbulletentries}
+
+
+        \item \textbf{\textit{Dr. Rory Barnes}} (UW) - Ph.D. Advisor: \href{mailto:rkb9@uw.edu}{rkb9@uw.edu}
+
+        \item \textbf{\textit{Dr. Jessica Werk}} (UW) - Astronomy Chair: \href{mailto:jwerk@uw.edu}{jwerk@uw.edu}
+
+        \item \textbf{\textit{Dr. Eric Agol}} (UW) - Graduate Advisor: \href{mailto:agol@uw.edu}{agol@uw.edu}
+
+
+        \end{highlightsforbulletentries}
+    \end{onecolentry}
+
+
+\end{document}
