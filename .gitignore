@@ -1,0 +1,13 @@
+classic/
+markdown/
+Transcript_HECTORDELGADODIAZ.pdf
+rendercv_output/*.png
+rendercv_output/__pycache__/
+rendercv_output/*.aux
+rendercv_output/*.html
+rendercv_output/*.log
+rendercv_output/*.md
+rendercv_output/.DS_Store
+Student transcript.pdf
+UWUnofficialTranscript.pdf
+README.md
