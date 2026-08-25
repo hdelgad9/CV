@@ -7,26 +7,55 @@ cv:
       username: hdelgad9
   sections:
     education:
-      - institution: University of Washington
-        area: Astronomy and Astrobiology
-        degree: 'Ph.D.'
+      - company: Ph.D. University of Washington
+        position: Astronomy and Astrobiology
         start_date: 2019-09
-        end_date: present
+        end_date: 2026-08
         highlights:
           - 'M.S. in Astronomy degree conferred 2021-03'
-          - 'GPA: 3.71/4.00'
-      - institution: California State University Los Angeles
-        area: Physics
-        degree: 'M.S.'
+      - company: M.S. California State University Los Angeles
+        position: Physics
         start_date: 2017-08
         end_date: 2019-05
         highlights:
           - 'Dissertation Title: Stability of Nitrogen in Planetary Atmospheres in Contact with Liquid Water'
-      - institution: Universidad de Puerto Rico en Cayey
-        area: General Sciences
-        degree: 'B.Sc.'
+      - company: B.Sc. Universidad de Puerto Rico en Cayey
+        position: General Sciences
         start_date: 2012-08
         end_date: 2017-05
+    Publications:
+      - title: 'The Effect of Stellar Energetic Particles from a Large M Dwarf Flare on the Atmospheric Chemistry of Potentially Habitable Exoplanets (in-prep)'
+        authors:
+          - '***H. Delgado Diaz***'
+          - A. Miranda-Rosete
+          - A.a Segura
+          - G. Gronoff
+          - V. Airapetian
+          - J. Kasting
+        journal: Monthly Notices of the Royal Astronomical Society
+      - title: 'Climates of Gl 514 b (accepted)'
+        authors:
+          - '***H. Delgado Diaz***'
+          - R. Barnes
+          - R. Deitrick
+          - M. Damasso
+        journal: The Astrophysical Journal
+      - title: 'The Effect of Tidal Heating and Volatile Budgets on the Outgassed Atmosphere on 55 Cancri e'
+        authors:
+          - B. Nguyen
+          - L. Schaefer
+          - F. Dai
+          - '***H. Delgado Diaz***'
+        doi: 10.3847/1538-4357/ae3f21
+        journal: The Astrophysical Journal
+        date: 2026-02
+      - title: Stability of Nitrogen in Planetary Atmospheres in Contact with Liquid Water
+        authors:
+          - R. Hu
+          - '***H. Delgado Diaz***'
+        doi: 10.3847/1538-4357/ab4cea
+        journal: The Astrophysical Journal
+        date: 2019-11
     Academic Experience:
       - company: University of Washington
         position: Research Assistant
@@ -39,16 +68,27 @@ cv:
             orbiting M dwarf stars and studied their habitability based on stellar,
             orbital, rotational, and atmospheric parameters.'
           - 'With Python, created simulations of exoplanetary atmospheric spectra and used 
-            bayesian approach to simulate JWST observations of such atmosphere to assess habitability.'
+            Bayesian approach to simulate JWST observations of such atmosphere to assess habitability.'
+      - company: University of Washington
+        position: Teaching Assistant
+        location: Seattle, WA, USA
+        start_date: 2019-09
+        end_date: present
+        highlights:
+          - 'Taught the Activity portion of Introduction to Astronomy for undergraduate 
+            students in-person and online.'
+          - Moderated discussions for 30+ students in the online course.
+          - 'Migrated and helped develop the "Introduction to Astrobiology" course from in-person to the online Canvas platform
+            during the COVID-19 pandemic.'
       - company: University of Washington
         position: Instructor
         location: Seattle, WA, USA
         start_date: 2024-09
-        end_date: present
+        end_date: 2025-03
         highlights:
-          - 'Co-Instructor of Cosmology (ASTR 425) with Dr. Jessica Werk during Winter Quarter'
-          - 'Instructor of Pre-Major in Astronomy Program (ASTR 192) during Fall Quarter'
-      - company: Universidad Nacioinal Autonoma de Mexico 
+          - 'Co-Instructor of Cosmology (ASTR 425) with Dr. Jessica Werk'
+          - 'Instructor of Pre-Major in Astronomy Program (ASTR 192)'
+      - company: Universidad Nacional Autonoma de Mexico 
         position: Research Assistant
         location: Ciudad de Mexico, Mexico
         start_date: 2024-06
@@ -66,26 +106,16 @@ cv:
           - 'Earth and Planetary Sciences; Advisor: Laura Schaefer'
           - Used MATLAB to add the physics of CO2 outgassing from planetary interior
             on a magma ocean code.
-      - company: University of Washington
-        position: Teaching Assistant
-        location: Seattle, WA, USA
-        start_date: 2019-09
-        end_date: 2021-05
-        highlights:
-          - 'Taught the Activity portion of Introduction to Astronomy for undergraduate 
-            students in-person and online.'
-          - Moderated discussions for 30+ students in the online course.
-          - 'Migrated Introduction to Astrobiology course from in-person to online Canvas platform
-            during the COVID pandemic and the course is still available online.'
       - company: CERN
         position: Research Intern
         location: Geneva, Switzerland
         start_date: 2019-06
         end_date: 2019-09
         highlights:
-          - 'ATLAS group; Advisor: Matt LeBlanc'
-          - 'Used C++ to process and clean data from particle collisions gathered by 
-            the ATLAS detector.'
+          - 'ATLAS Experiment; Advisor: Matt LeBlanc'
+          - 'Pivoted into experimental particle physics: used C++ to develop data processing
+            pipelines for proton-proton collision events collected by the ATLAS detector at
+            the Large Hadron Collider.'
       - company: NASA Jet Propulsion Laboratory
         position: Visiting Research Student
         location: La Canada, CA, USA
@@ -103,6 +133,14 @@ cv:
         highlights:
           - 'Physics Department; Advisor: Luca Ricci'
           - Used ALMA radio telescope data to study the chemical components of protoplanetary disks.
+      - company: California State University Los Angeles
+        position: Teaching Assistant
+        location: Los Angeles, CA
+        start_date: 2017-08
+        end_date: 2019-05
+        highlights:
+          - 'Assisted in PHYS 2100 and 2200 laboratory classes and taught the discussion portion of the course.' 
+          - 'Held office hours and participated on the Physics and Astronomy tutoring center.'
       - company: Universidad de Puerto Rico en Cayey
         position: Student Researcher
         location: Cayey, PR, USA
@@ -121,7 +159,7 @@ cv:
           - 'Used data from the Cassini-Huygens mission to constrain the source of stratospheric
             water of Saturn'
       - company: The Washington Center
-        position: International Relation Interns
+        position: International Relations Intern
         location: Washington, DC, USA
         start_date: 2015-01
         end_date: 2015-06
@@ -131,6 +169,7 @@ cv:
             States for diplomatic meetings.
           - 'Assisted in Translating, proofreading, and formatting the book "Protocolo San Salvador"'
           - Live English scribe for the Secretary of Social Inclusion Meetings for the American States.
+          - Completed course on International Markets and Business
       - company: San Jose State University
         position: Summer Research Intern
         location: San Jose, CA, USA
@@ -140,46 +179,115 @@ cv:
           - 'Laboratory of Neuroscience; Advisor: Katherine Wilkinson'
           - 'Used mice leg muscles to study the effects of lactic acid on nociceptors III and IV neurons
             and how obesity could be related to associated muscular and joint pain.'
-    Publications:
-      - title: 'Climates of Gl 514 b (in-prep)'
-        authors:
-          - '***Hector Delgado Diaz***'
-          - Rory Barnes
-          - Russell Deitrick
-          - Mario Damasso
-      - title: Stability of Nitrogen in Planetary Atmospheres in Contact with Liquid Water
-        authors:
-          - Renyu Hu
-          - '***Hector Delgado Diaz***'
-        doi: 10.3847/1538-4357/ab4cea
-        journal: The Astrophysical Journal
-        date: 2019-11
     Awards and Fellowships:
+      - name: Wallerstein Graduate Student Research Fellowship 
+        location: Seattle, WA, USA
+        date: 2025-09
       - name: Beca Josep Comas i Sola Escuela de Astrobiologia
         location: Santander, Spain
         date: 2023-07
       - name: Bonderman Fellowship Award
         date: 2021-04
+        summary: ''
         highlights:
           - Selected out of 200 applicants to travel the world for 8 months as part of a cultural experience.
-          - 'Dates traveled: September 2023 - May 2024.'
       - name: Department of Astronomy Teacher of the Year Award
         location: Seattle, WA, USA
         date: 2020-09
       - name: ARCS Foundation Fellowship
         location: Seattle, WA, USA
         date: 2019-08
+        summary: ''
         highlights:
-          - 'Selected for a 3-year fellowship totaling \$17,500.'
+          - 'Selected for a 3-year fellowship totaling $17,500.'
       - name: GEM Fellow
         location: Seattle, WA, USA
         date: 2019-08
-      - name: Exo-Atmoshperes Summer School Scholarship
+      - name: Exo-Atmospheres Summer School Scholarship
         location: Chur, Switzerland
         date: 2019-06
       - name: Hispanic Scholarship Fund Award
         location: Los Angeles, CA, USA
         date: 2018-08
+    Outreach and Volunteering Experience:
+      - name: 'AAS Committe on Astronomy and Public Policy (CAPS) - Committee Member'
+        start_date: 2026-06
+        end_date: present
+      - name: 'Origins: Life in the Universe'
+        start_date: 2024-12
+        end_date: present
+        highlights: 
+          - 'Co-founder of the Astrobiology Registered Student Organization at the UW'
+          - 'Graduate Student Advisor position'
+      - name: UW Astronomy Graduate Senator
+        start_date: 2024-09
+        end_date: present
+        highlights: 
+          - 'Member of the Diversity Committee, Travel Grants Committee, and U-Pass Advisory Board'
+          - Monthly meetings held for the General Senate and weekly meetings for each committee
+          - 'Co-writer of approved resolutions to improve graduate student life at the UW'
+      - name: Raising eSTEAM
+        start_date: 2022-02
+        end_date: present
+        highlights:
+          - 'Co-founder of the initiative'
+          - 'Current Grant Coordinator position with the task of finding and applying to grants
+            to fund the program.'
+          - 'Tutor and teach STEM courses to incarcerated youth to help mitigate the vicious cycle of crime and punishment'
+      - name: NASA Subject Matter Expert Volunteering
+        start_date: 2021-10
+        end_date: present
+      - name: UW Planetarium
+        start_date: 2019-10
+        end_date: present
+        highlights:
+          - 'Volunteer presenter for public shows and school field trips at the UW Planetarium.'
+      - name: 'Peer Reviewer, Astrophysical Journal Supplement Series'
+        date: 2025-02
+        highlights: 
+          - 'Invited to review a manuscript on distance estimates for RR Lyrae Stars'
+      - name: 'VPLanet Workshop - Tech Support'
+        date: 2023-08
+      - name: UW Astronomy Graduate Senator
+        start_date: 2020-09
+        end_date: 2021-05
+    Research Mentorship:
+      - name: Avery Wolf (University of Washington)
+        date: 2025
+      - name: Jessica Lemus (University of Washington)
+        date: 2025
+      - name: Nathaniel Brown (University of Washington)
+        date: 2025
+      - name: Kyler Reynolds (Everett Community College)
+        date: 2024-2025
+    Work Experience:
+      - company: University of Washington Upward Bound
+        position: High School Science and Astronomy Teacher
+        location: Seattle, WA, USA
+        start_date: 2025-06
+        end_date: 2025-08
+        highlights:
+          - 'Designed and taught "Introduction to Astronomy and Astrobiology" to high school students.'
+          - 'Taught high school students how to communicate science through the use of infographics.'
+          - 'Designed a solar powered miniature car using circuits and TinkerCAD.'
+      - company: Fusion Academy
+        position: High School Science Teacher
+        location: Pasadena, CA, USA
+        start_date: 2022-06
+        end_date: 2023-09
+        highlights:
+          - 'Taught high school students Science courses: Astronomy, Chemistry, Physics,
+            Biology, Math (Algebra-Calculus), and Earth and Space Science.'
+          - 'Served as a substitute teacher for Spanish and Economy.'
+      - company: Griffith Observatory
+        position: Museum Guide and Online Support
+        location: Los Angeles, CA, USA
+        start_date: 2021-06
+        end_date: 2023-09
+        highlights:
+          - Worked explaining astronomy history, instruments, and science to the general public
+            in English and Spanish.
+          - Worked as online support for the Griffith Museum Online School Program.
     Talks and Posters:
       - name: Climates of Gl 514 b
         date: 2025-01
@@ -205,7 +313,7 @@ cv:
         date: 2023-05
         highlights:
           - AbGradCon, San Diego, CA, USA
-      - name: Climates og Gl 514 b (poster)
+      - name: Climates of Gl 514 b (poster)
         date: 2023-01
         highlights:
           - American Astronomical Society 241st Winter Meeting, Seattle, WA, USA
@@ -245,32 +353,6 @@ cv:
         date: 2015-10
         highlights:
           - Society for the Advancement of Chicanos and Native Americans in Science, Los Angeles, CA, USA
-    Outreach and Volunteering Experience:
-      - name: 'Peer Reviewer, Astrophysical Journal Supplement Series'
-        date: 2025-02
-        highlights: 
-          - 'Invited to review a manuscript on distance estimates for RR Lyrae Stars'
-      - name: 'Origins: Life in the Universe'
-        start_date: 2024-12
-        end_date: present
-        highlights: 
-          - 'Co-founder of the Astrobiology Registered Student Organization at the UW'
-          - 'Graduate Student Advisor position'
-      - name: UW Astronomy Graduate Senator
-        start_date: 2024-09
-        end_date: present
-        highlights: 
-          - 'Member of the Diversity Comittee and Travel Grants Comittee'
-          - Monthly meetings held for the General Senate and weekly meetings for each committee
-          - 'Co-writer of approved resolution'
-      - name: NASA Subject Matter Expert Volunteering
-        start_date: 2021-10
-        end_date: present
-      - name: 'VPLanet Workshop - Tech Support'
-        date: 2023-08
-      - name: UW Astronomy Graduate Senator
-        start_date: 2020-09
-        end_date: 2021-05
     Professional Development:
       - name: Mars Ideation Factory
         date: 2023-08
@@ -281,38 +363,9 @@ cv:
       - name: Carl Sagan Summer Workshop
         date: 2023-07
         location: Pasadena, CA, USA
-      - name: Exo-Atmoshperes Summer School
+      - name: Exo-Atmospheres Summer School
         date: 2019-06
         location: Chur, Switzerland
-    Research Mentorship:
-      - name: Nathaniel Brown (University of Washington)
-        date: 2025
-      - name: Kyler Reynolds (Everett College)
-        date: 2024-2025
-    Work Experience:
-      - company: Fusion Academy
-        position: High School Science Teacher
-        location: Pasadena, CA, USA
-        start_date: 2022-06
-        end_date: 2023-09
-        highlights:
-          - 'Taught high school students Science courses: Astronomy, Chemistry, Physics,
-            Biology, Math (Algebra-Calculus), and Earth and Space Science.'
-          - 'Served as a substitute teacher for Spanish and Economy.'
-      - company: Griffith Observatory
-        position: Museum Guide and Online Support
-        location: Los Angeles, CA, USA
-        start_date: 2021-06
-        end_date: 2023-09
-        highlights:
-          - Worked explaining astronomy history, instruments, and science to the general public
-            in English and Spanish.
-          - Worked as online support for the Griffith Museum Online School Program.
-    References:
-      - bullet: '***Dr. Rory Barnes*** (UW) - Ph.D. Advisor: [rkb9@uw.edu](mailto:rkb9@uw.edu)'
-      - bullet: '***Dr. Jessica Werk*** (UW) - Astronomy Chair: [jwerk@uw.edu](mailto:jwerk@uw.edu)'
-      - bullet: '***Dr. Eric Agol*** (UW) - Graduate Advisor: [agol@uw.edu](mailto:agol@uw.edu)'
-
 design:
   theme: classic
   page:
@@ -352,7 +405,7 @@ design:
     use_icons_for_connections: true
     alignment: center
   section_titles:
-    type: with-parial-line
+    type: moderncv
     font_family: Source Sans 3
     font_size: 1.4em
     bold: true
@@ -384,7 +437,6 @@ design:
       degree_column_template: '**DEGREE**'
       degree_column_width: 1cm
       main_column_second_row_template: |-
-        SUMMARY
         HIGHLIGHTS
       date_and_location_column_template: |-
         LOCATION
@@ -456,6 +508,6 @@ locale:
     - November
     - December
 rendercv_settings:
-  date: '2025-02-21'
+  #date: '%B %Y'
   render_command:
   bold_keywords: []
