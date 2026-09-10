@@ -39,7 +39,10 @@ cv:
           - R. Barnes
           - R. Deitrick
           - M. Damasso
-        journal: The Astrophysical Journal
+          - N. Brown
+        doi: 10.3847/PSJ/ae9861
+        journal: The Planetary Science Journal
+        date: 2026-08
       - title: 'The Effect of Tidal Heating and Volatile Budgets on the Outgassed Atmosphere on 55 Cancri e'
         authors:
           - B. Nguyen
